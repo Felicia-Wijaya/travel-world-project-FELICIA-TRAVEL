@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>E-Ticket | Felicia Travel</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+<div class="ticket-page">
+
+    <div class="ticket-card">
+
+        <div class="ticket-header">
+
+            <h1>🎫 E-Ticket</h1>
+
+            <p>Felicia Travel</p>
+
+        </div>
+
+        <div class="ticket-body">
+
+            <div class="ticket-row">
+                <span>Nomor Booking</span>
+                <strong id="bookingCode">-</strong>
+            </div>
+
+            <div class="ticket-row">
+                <span>Nama Pemesan</span>
+                <strong id="customerName">-</strong>
+            </div>
+
+            <div class="ticket-row">
+                <span>Paket Wisata</span>
+                <strong id="packageName">-</strong>
+            </div>
+
+            <div class="ticket-row">
+                <span>Harga</span>
+                <strong id="packagePrice">-</strong>
+            </div>
+
+            <div class="ticket-qr">
+                <img id="qrCode" src="" alt="QR Code">
+            </div>
+
+            <div class="ticket-row">
+                <span>Status</span>
+                <strong class="status-paid">
+                    BERHASIL
+                </strong>
+            </div>
+
+        </div>
+
+        <div class="ticket-footer">
+
+            <button onclick="window.print()" class="btn-print">
+                Cetak Tiket
+            </button>
+
+            <a href="index.html" class="btn-home">
+                Kembali ke Home
+            </a>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script>
+
+const bookingCode =
+localStorage.getItem("bookingCode") || "-";
+
+const customerName =
+localStorage.getItem("customerName") || "-";
+
+const packageName =
+localStorage.getItem("packageName") || "-";
+
+const packagePrice =
+localStorage.getItem("packagePrice") || "-";
+
+document.getElementById("bookingCode").textContent =
+bookingCode;
+
+document.getElementById("customerName").textContent =
+customerName;
+
+document.getElementById("packageName").textContent =
+packageName;
+
+document.getElementById("packagePrice").textContent =
+packagePrice;
+
+/* QR CODE */
+
+const qrData =
+`Kode:${bookingCode}
+Nama:${customerName}
+Paket:${packageName}
+Harga:${packagePrice}`;
+
+document.getElementById("qrCode").src =
+`https://api.qrserver.com/v1/create-qr-code/?size=250x250&data=${encodeURIComponent(qrData)}`;
+
+</script>
+
+
+</body>
+</html>

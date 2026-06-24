@@ -1,115 +1,167 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Booking - Felicia Travel</title>
+<title>Booking Travel</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 
 <link rel="stylesheet" href="css/style.css">
 
-<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-rel="stylesheet">
+<style>
+
+/* ===== BOOKING UI MODERN ===== */
+
+body{
+background:linear-gradient(180deg,#eef6ff,#f8fbff);
+}
+
+.booking-wrapper{
+display:flex;
+justify-content:center;
+align-items:center;
+padding:60px 20px;
+}
+
+.booking-card{
+width:100%;
+max-width:520px;
+background:white;
+border-radius:25px;
+padding:35px;
+box-shadow:0 20px 60px rgba(0,0,0,.08);
+animation:fadeUp .6s ease;
+}
+
+.booking-card h2{
+text-align:center;
+margin-bottom:10px;
+color:#0F4C81;
+font-size:28px;
+}
+
+.booking-card p{
+text-align:center;
+color:#6B7280;
+margin-bottom:25px;
+}
+
+.input-group{
+margin-bottom:15px;
+}
+
+.input-group label{
+display:block;
+margin-bottom:6px;
+font-weight:600;
+font-size:14px;
+}
+
+.input-group input,
+.input-group select,
+.input-group textarea{
+width:100%;
+padding:12px 14px;
+border-radius:12px;
+border:1px solid #ddd;
+outline:none;
+transition:.3s;
+font-family:inherit;
+}
+
+.input-group input:focus,
+.input-group select:focus,
+.input-group textarea:focus{
+border-color:#0F4C81;
+box-shadow:0 0 0 3px rgba(15,76,129,.1);
+}
+
+.submit-btn{
+width:100%;
+padding:14px;
+border:none;
+border-radius:12px;
+background:linear-gradient(90deg,#0F4C81,#3FA9F5);
+color:white;
+font-weight:700;
+cursor:pointer;
+margin-top:10px;
+transition:.3s;
+}
+
+.submit-btn:hover{
+transform:translateY(-3px);
+}
+
+@keyframes fadeUp{
+from{opacity:0; transform:translateY(30px);}
+to{opacity:1; transform:translateY(0);}
+}
+
+</style>
 
 </head>
 
 <body>
 
-<!-- HEADER -->
-
-<header>
-
-<div class="page-header">
-
-<h1 class="highlight">
-FORM BOOKING TRAVEL
-</h1>
-
-<p>
-Isi data Anda untuk melakukan pemesanan paket wisata
-</p>
-
+<!-- NAV -->
 <nav class="nav">
-
 <a href="index.html">HOME</a>
-<a href="booking.html">BOOKING</a>
 <a href="package.html">PACKAGE</a>
-<a href="login.html">LOGIN  </a>
-
+<a href="booking.html">BOOKING</a>
+<a href="login.html">LOGIN</a>
 </nav>
 
+<!-- HERO MINI -->
+<section class="hero" style="min-height:35vh;">
+<h2>Booking Travel</h2>
+<p>Isi data untuk memesan paket liburan Anda</p>
+</section>
+
+<!-- BOOKING FORM -->
+<div class="booking-wrapper">
+
+<div class="booking-card">
+
+<h2>Form Booking</h2>
+<p>Pastikan data sesuai untuk proses pemesanan</p>
+
+<form id="bookingForm">
+
+<div class="input-group">
+<label>Nama Lengkap</label>
+<input type="text" required>
 </div>
 
-</header>
-
-<div class="page-wrapper">
-
-<div class="booking-container">
-
-<h1>Booking Sekarang</h1>
-
-<p>
-Silakan isi formulir di bawah untuk memesan paket wisata Anda.
-</p>
-
-<form>
-
-<label>Nama Lengkap</label>
-<input type="text" placeholder="Masukkan nama lengkap" required>
-
+<div class="input-group">
 <label>Email</label>
-<input type="email" placeholder="Masukkan email" required>
+<input type="email" required>
+</div>
 
-<label>No. Telepon</label>
-<input type="tel" placeholder="Masukkan nomor telepon" required>
+<div class="input-group">
+<label>No HP</label>
+<input type="tel" required>
+</div>
 
-<label>Pilih Paket Wisata</label>
-
-<select required>
-
-<option value="">
--- Pilih Paket --
-</option>
-
-<option>
-Bali Package
-</option>
-
-<option>
-Jepang Package
-</option>
-
-<option>
-Kamboja Package
-</option>
-
-<option>
-Korea Package
-</option>
-
-<option>
-Raja Ampat Package
-</option>
-
-<option>
-Vietnam Package
-</option>
-
+<div class="input-group">
+<label>Pilih Paket</label>
+<select id="paket">
+<option>Korea Package</option>
+<option>Japan Package</option>
+<option>Bali Package</option>
+<option>Raja Ampat</option>
 </select>
+</div>
 
-<label>Tanggal Keberangkatan</label>
+<div class="input-group">
+<label>Tanggal Berangkat</label>
 <input type="date" required>
+</div>
 
-<label>Jumlah Peserta</label>
-<input type="number" min="1" placeholder="Jumlah peserta" required>
-
-<label>Catatan Tambahan</label>
-
-<textarea placeholder="Tambahkan catatan jika ada"></textarea>
-
-<button class="submit-btn">
+<button class="submit-btn" type="submit">
 Kirim Booking
 </button>
 
@@ -119,15 +171,28 @@ Kirim Booking
 
 </div>
 
-<!-- FOOTER -->
+<!-- FLOAT BUTTON -->
+<div class="floating-btn">↑</div>
 
-<footer class="footer-section">
+<script>
 
-<p>
-© 2025 Felicia Travel — All Rights Reserved
-</p>
+// FLOAT TOP
+document.querySelector('.floating-btn').onclick = () => {
+window.scrollTo({top:0,behavior:'smooth'});
+};
 
-</footer>
+// FORM INTERAKTIF
+document.getElementById('bookingForm').addEventListener('submit',function(e){
+e.preventDefault();
+
+let paket = document.getElementById('paket').value;
+
+alert("Booking berhasil untuk " + paket);
+
+window.location.href = "index.html";
+});
+
+</script>
 
 </body>
 

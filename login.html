@@ -1,126 +1,183 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+
+const loginForm = document.querySelector("form");
+
+loginForm.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const email =
+    document.querySelector('input[type="email"]').value;
+
+    const password =
+    document.querySelector('input[type="password"]').value;
+
+    if(email === "" || password === ""){
+
+        alert("Email dan Password wajib diisi!");
+
+        return;
+    }
+
+    if(password.length < 6){
+
+        alert("Password minimal 6 karakter!");
+
+        return;
+    }
+
+    alert("Login Berhasil!");
+
+    window.location.href = "index.html";
+
+});
+
+</script>
+
+<link rel="stylesheet" href="css/style.css"
+<body>
+    <!DOCTYPE html>
 <html lang="id">
+
 <head>
 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Login - Travel Indonesia</title>
+    <title>Login | Felicia Travel</title>
 
-    <!-- GOOGLE FONT -->
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="page-header fade-in">
-        <h1>
-            Explore <span class="highlight">Indonesia Bersama Felicia</span>
-        </h1>
+    <div class="login-page">
 
-        <p>
-            Temukan destinasi wisata terbaik dengan harga terjangkau
-        </p>
-    </header>
+        <!-- LEFT -->
 
-    <!-- NAVBAR -->
-    <nav class="nav">
-        <a href="index.html">HOME</a>
-        <a href="package.html">PACKAGE</a>
-        <a href="booking.html">BOOKING</a>
-        <a href="login.html">LOGIN</a>
-    </nav>
+        <div class="login-left">
 
+            <div class="overlay"></div>
 
-    <!-- LOGIN CONTAINER -->
-    <div class="login-container">
+            <div class="login-content">
 
-        <!-- LOGIN BOX -->
-        <div class="login-box fade-in">
+                <h1>
+                    Explore.<br>
+                    Dream.<br>
+                    Discover.
+                </h1>
 
-            <!-- ICON -->
-            <div class="login-icon">
-                ✈
+                <p>
+                    Masuk ke akun Anda dan mulai perjalanan impian bersama Felicia Travel.
+                </p>
+
             </div>
 
-            <!-- TITLE -->
-            <h2>Welcome Back</h2>
+        </div>
 
-            <!-- FORM -->
-            <form action="dashboard.html">
+        <!-- RIGHT -->
 
-                <!-- EMAIL -->
-                <div class="input-group">
+        <div class="login-right">
 
-                    <label for="email">
-                        Email
-                    </label>
+            <div class="login-box">
 
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Masukkan email"
-                        required
-                    >
-
-                </div>
-
-                <!-- PASSWORD -->
-                <div class="input-group">
-
-                    <label for="password">
-                        Password
-                    </label>
-
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Masukkan password"
-                        required
-                    >
-
-                </div>
-
-                <!-- REMEMBER -->
-                <div class="remember-box">
-
-                    <label>
-                        <input type="checkbox">
-                        Remember Me
-                    </label>
-
-                    <a href="#">
-                        Forgot Password?
-                    </a>
-
-                </div>
-
-                <!-- BUTTON -->
-                <button type="submit" class="login-btn">
-                    Login
-                </button>
-
-            </form>
-
-            <!-- REGISTER -->
-            <p class="register-text">
-
-                Belum punya akun?
-
-                <a href="#">
-                    Register
+                <a href="index.html" class="back-home">
+                    ←
                 </a>
 
-            </p>
+                <h2>
+                    Selamat Datang
+                </h2>
+
+                <p class="login-subtitle">
+                    Silakan login ke akun Anda
+                </p>
+
+                <form>
+
+                    <div class="input-group">
+
+                        <label>Email</label>
+
+                        <input
+                            type="email"
+                            placeholder="Masukkan email">
+
+                    </div>
+
+                    <div class="input-group">
+
+                        <label>Password</label>
+
+                        <input
+                            type="password"
+                            placeholder="Masukkan password">
+
+                    </div>
+
+                    <div class="login-options">
+
+                        <label>
+
+                            <input type="checkbox">
+
+                            Ingat Saya
+
+                        </label>
+
+                        <a href="#">
+                            Lupa Password?
+                        </a>
+
+                    </div>
+
+                    <button class="btn-login-submit">
+
+                        Login
+
+                    </button>
+
+                </form>
+
+                <div class="divider">
+
+                    <span>ATAU</span>
+
+                </div>
+
+                <button class="google-btn">
+
+                    Login dengan Google
+
+                </button>
+
+                <p class="register-text">
+
+                    Belum punya akun?
+
+                    <a href="regist.html">
+                        Daftar Sekarang
+                    </a>
+
+                </p>
+
+            </div>
 
         </div>
 
     </div>
 
 </body>
+
 </html>
+

@@ -1,227 +1,553 @@
 <!DOCTYPE html>
 <html lang="id">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Travel Indonesia</title>
+<title>Felicia Travel</title>
 
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
 
-    <link rel="stylesheet" href="css/style.css">
+<link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="page-header fade-in">
-        <h1>
-            Explore
-            <span class="highlight">
-                Indonesia Bersama Felicia
-            </span>
-        </h1>
+<!-- NAVBAR -->
 
-        <p>
-            Temukan destinasi wisata terbaik dengan harga terjangkau
-        </p>
-    </header>
+<nav class="navbar">
 
-    <!-- NAVBAR -->
-    <nav class="nav">
-        <a href="index.html">HOME</a>
-        <a href="package.html">PACKAGE</a>
-        <a href="booking.html">BOOKING</a>
-        <a href="login.html">LOGIN</a>
-    </nav>
+<div class="container nav-container">
 
-    <!-- HERO -->
-    <section class="hero fade-in">
-        <h2>Jelajahi Dunia Bersama Kami</h2>
+<div class="logo">
+Felicia Travel
+</div>
 
-        <p>
-            Paket wisata terbaik dengan harga spesial
-        </p>
+<ul class="nav-menu">
 
-        <a href="booking.html" class="hero-btn">
-            Pesan Sekarang
-        </a>
-    </section>
+<li><a href="index.html" class="nav-link">Home</a></li>
+<li><a href="destinasi.html" class="nav-link">Destinasi</a></li>
+<li><a href="package.html" class="nav-link">Paket</a></li>
+<li><a href="promo.html" class="nav-link">Promo</a></li>
+<li><a href="kontak.html" class="nav-link">Kontak</a></li>
 
-    <!-- MAIN CONTENT -->
-    <main>
+</ul>
 
-        <div class="product-grid">
+<a href="login.html" class="btn-login">
+Login
+</a>
 
-            <!-- CARD 1 -->
-            <div class="product-card reveal">
+</div>
 
-                <div class="image-box">
-                    <img src="assets/Korea.jpeg" alt="Korea Package">
+</nav>
 
-                    <span class="badge">
-                        Promo
-                    </span>
-                </div>
+<!-- HERO -->
 
-                <div class="content">
+<section class="hero">
 
-                    <h2 class="nama-barang">
-                        KOREA PACKAGE
-                    </h2>
+<img src="https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=1920">
 
-                    <p class="deskripsi-barang">
-                        Liburan seru ke Korea dengan fasilitas lengkap.
-                    </p>
+<div class="hero-content">
 
-                    <div class="footer">
-                        <span class="harga-barang">
-                            Rp 2.500.000
-                        </span>
+<h1>
+Explore The World
+</h1>
 
-                        <button class="buy-btn">
-                            Booking
-                        </button>
-                    </div>
+<p>
+Temukan pengalaman perjalanan terbaik bersama Felicia Travel.
+</p>
 
-                </div>
+<a href="package.html" class="btn-hero">
+Mulai Sekarang
+</a>
 
-            </div>
+</div>
 
-            <!-- CARD 2 -->
-            <div class="product-card reveal">
+</section>
 
-                <div class="image-box">
-                    <img src="assets/jepang.jpeg" alt="Jepang Package">
+<!-- SEARCH -->
 
-                    <span class="badge">
-                        Best Seller
-                    </span>
-                </div>
+<div class="container search-wrapper">
 
-                <div class="content">
+<div class="search-box">
 
-                    <h2 class="nama-barang">
-                        JEPANG PACKAGE
-                    </h2>
+<div class="search-tabs">
 
-                    <p class="deskripsi-barang">
-                        Jelajahi keindahan Jepang dengan fasilitas hotel,
-                        makan, dan tour guide.
-                    </p>
+<div class="search-tab active">
+Paket Wisata
+</div>
 
-                    <div class="footer">
-                        <span class="harga-barang">
-                            Rp 3.500.000
-                        </span>
 
-                        <button class="buy-btn">
-                            Booking
-                        </button>
-                    </div>
+<div class="search-tab">
+Hotel
+</div>
 
-                </div>
+<div class="search-tab">
+Pesawat
+</div>
 
-            </div>
+</div>
 
-        </div>
+<div class="search-grid">
 
-    </main>
+    <input
+        type="text"
+        id="destination"
+        placeholder="Destinasi">
 
-    <!-- FEATURES -->
-    <section class="features">
+    <input
+        type="date"
+        id="date">
 
-        <div class="feature-box reveal">
-            <h3>Hotel Bintang 5</h3>
+    <select id="duration">
+        <option value="">Durasi</option>
+        <option>3 Hari</option>
+        <option>5 Hari</option>
+        <option>7 Hari</option>
+    </select>
 
-            <p>
-                Menginap di hotel terbaik dengan fasilitas premium.
-            </p>
-        </div>
+    <select id="person">
+        <option value="">Peserta</option>
+        <option>1 Orang</option>
+        <option>2 Orang</option>
+        <option>3 Orang</option>
+        <option>4+ Orang</option>
+    </select>
 
-        <div class="feature-box reveal">
-            <h3>Tour Guide Profesional</h3>
+    <button
+        class="btn-search"
+        id="searchBtn">
 
-            <p>
-                Dipandu oleh guide berpengalaman.
-            </p>
-        </div>
+        Cari
 
-        <div class="feature-box reveal">
-            <h3>Harga Terjangkau</h3>
+    </button>
 
-            <p>
-                Paket wisata lengkap dengan harga kompetitif.
-            </p>
-        </div>
+</div>
 
-    </section>
+<div id="searchResult"></div>
 
-    <!-- TESTIMONIAL -->
-    <section class="testimonial">
+</div>
 
-        <div class="testimonial-box reveal">
-            <p>
-                "Pelayanan sangat memuaskan dan perjalanan
-                berjalan lancar."
-            </p>
+</div>
 
-            <strong>- Andi</strong>
-        </div>
+<!-- PAKET -->
 
-        <div class="testimonial-box reveal">
-            <p>
-                "Harga murah tetapi fasilitas sangat lengkap."
-            </p>
+<section class="section">
 
-            <strong>- Siti</strong>
-        </div>
+<div class="container">
 
-    </section>
+<h2 class="section-title">
+Paket Populer
+</h2>
 
-    <!-- FOOTER -->
-    <footer class="footer-section">
-        <h3>Travel Indonesia</h3>
+<p class="section-subtitle">
+Pilihan terbaik untuk liburan impian Anda.
+</p>
 
-        <p>
-            © 2025 Travel Indonesia. All Rights Reserved.
-        </p>
-    </footer>
+<div class="package-grid">
 
-    <!-- FLOATING BUTTON -->
-    <div class="floating-btn">
-        ↑
-    </div>
+<!-- CARD 1 -->
 
-    <!-- SCROLL REVEAL -->
-    <script>
-        const reveals = document.querySelectorAll(
-            '.product-card, .feature-box, .testimonial-box'
-        );
+<div class="package-card">
 
-        function revealOnScroll() {
+<div class="package-image">
 
-            reveals.forEach((element) => {
+<span class="badge badge-best">
+BEST SELLER
+</span>
 
-                const windowHeight = window.innerHeight;
-                const elementTop =
-                    element.getBoundingClientRect().top;
+<img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf">
 
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('active');
-                }
+</div>
 
-            });
+<div class="package-content">
 
-        }
+<h3 class="package-title">
+Tokyo Sakura
+</h3>
 
-        window.addEventListener(
-            'scroll',
-            revealOnScroll
-        );
+<div class="package-meta">
+6 Hari 5 Malam
+</div>
 
-        revealOnScroll();
-    </script>
+<div class="package-price">
+Rp 15.990.000
+</div>
+
+<a href="detail.html?paket=tokyo"  class="btn-detail">
+Detail
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 2 -->
+
+<div class="package-card">
+
+<div class="package-image">
+
+<span class="badge badge-popular">
+POPULAR
+</span>
+
+<img src="https://images.ctfassets.net/dsbipkqphva2/2zdUsTY6w9GCLDiJ7oQXgS/e887adf01a8babce16caa45ade3d9828/A_woman_taking_a_photo_of_an_autumn_tree_near_Gyeongbokgung_Palace_-_Seoul_5_Days_Itinerary_Autumn_-_Places_To_Visit_In_Seo.jpeg?fm=webp&w=1192">
+
+</div>
+
+<div class="package-content">
+
+<h3 class="package-title">
+Seoul Autumn
+</h3>
+
+<div class="package-meta">
+5 Hari 4 Malam
+</div>
+
+<div class="package-price">
+Rp 11.500.000
+</div>
+
+<a href="detail.html?paket=seoul" class="btn-detail">
+Detail
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 3 -->
+
+<div class="package-card">
+
+<div class="package-image">
+
+<span class="badge badge-family">
+FAMILY
+</span>
+
+<img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb">
+
+</div>
+
+<div class="package-content">
+
+<h3 class="package-title">
+Swiss Alps
+</h3>
+
+<div class="package-meta">
+8 Hari 7 Malam
+</div>
+
+<div class="package-price">
+Rp 25.900.000
+</div>
+
+<a href="detail.html?paket=europe" class="btn-detail">
+Detail
+</a>
+
+</div>
+
+</div>
+
+<!-- CARD 4 -->
+
+<div class="package-card">
+
+<div class="package-image">
+
+<img src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963">
+
+</div>
+
+<div class="package-content">
+
+<h3 class="package-title">
+Paris Dream
+</h3>
+
+<div class="package-meta">
+7 Hari 6 Malam
+</div>
+
+<div class="package-price">
+Rp 22.500.000
+</div>
+
+<a href="detail.html?paket=australia" class="btn-detail">
+Detail
+</a>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- PROMO -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="promo-banner">
+
+<div>
+
+<h2>
+Diskon Hingga 30%
+</h2>
+
+<p>
+Promo spesial untuk destinasi internasional pilihan.
+</p>
+
+</div>
+
+<a href="promo.html" class="btn-hero">
+Lihat Promo
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- BENEFITS -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="benefits">
+
+<div class="benefit-grid">
+
+<div class="benefit-item">
+
+<div class="benefit-icon">
+<i class="fas fa-tag"></i>
+</div>
+
+<div>
+<h4>Harga Terbaik</h4>
+<p>Garansi harga kompetitif.</p>
+</div>
+
+</div>
+
+<div class="benefit-item">
+
+<div class="benefit-icon">
+<i class="fas fa-headset"></i>
+</div>
+
+<div>
+<h4>Support 24/7</h4>
+<p>Siap membantu kapan saja.</p>
+</div>
+
+</div>
+
+<div class="benefit-item">
+
+<div class="benefit-icon">
+<i class="fas fa-plane"></i>
+</div>
+
+<div>
+<h4>Destinasi Lengkap</h4>
+<p>Ratusan pilihan perjalanan.</p>
+</div>
+
+</div>
+
+<div class="benefit-item">
+
+<div class="benefit-icon">
+<i class="fas fa-shield"></i>
+</div>
+
+<div>
+<h4>Aman & Terpercaya</h4>
+<p>Berpengalaman bertahun-tahun.</p>
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- NEWSLETTER -->
+
+<section class="section">
+
+<div class="container">
+
+<div class="newsletter">
+
+<h2>
+Subscribe Newsletter
+</h2>
+
+<p>
+Dapatkan promo terbaru langsung ke email Anda.
+</p>
+
+<form class="newsletter-form">
+
+<input
+type="email"
+placeholder="Masukkan Email">
+
+<button type="submit">
+Subscribe
+</button>
+
+</form>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- FOOTER -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<h3 class="footer-title">
+Felicia Travel
+</h3>
+
+<p>
+Partner perjalanan terbaik untuk petualangan Anda.
+</p>
+
+</div>
+
+<div>
+
+<h4 class="footer-title">
+Menu
+</h4>
+
+<div class="footer-links">
+
+<a href="#">Home</a>
+<a href="#">Paket</a>
+<a href="#">Promo</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h4 class="footer-title">
+Bantuan
+</h4>
+
+<div class="footer-links">
+
+<a href="#">FAQ</a>
+<a href="#">Kontak</a>
+<a href="#">Support</a>
+
+</div>
+
+</div>
+
+<div>
+
+<h4 class="footer-title">
+Kontak
+</h4>
+
+<div class="footer-links">
+
+<a href="#">+62 812 3456 7890</a>
+<a href="#">info@feliciatravel.com</a>
+
+</div>
+
+</div>
+
+</div>
+
+<div class="footer-bottom">
+© 2026 Felicia Travel. All Rights Reserved.
+</div>
+
+</div>
+
+</footer>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const result = document.getElementById("searchResult");
+
+    // Kosongkan saat pertama kali membuka halaman
+    result.innerHTML = "";
+    result.classList.remove("active");
+
+    // Hapus pencarian lama
+    localStorage.removeItem("searchDestination");
+
+});
+</script>
+
+<script>
+
+document.getElementById("searchBtn").addEventListener("click", function () {
+
+    const destination =
+    document.getElementById("destination").value.trim();
+
+    if(destination === ""){
+
+        alert("Silakan masukkan destinasi.");
+
+        return;
+
+    }
+
+    localStorage.setItem(
+        "searchDestination",
+        destination
+    );
+
+    window.location.href =
+    "destinasi.html";
+
+});
+
+</script> 
 
 </body>
 </html>

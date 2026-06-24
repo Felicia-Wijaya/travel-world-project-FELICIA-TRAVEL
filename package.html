@@ -2,273 +2,482 @@
 <html lang="id">
 
 <head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Travel Packages</title>
+    <title>Paket Wisata | Felicia Travel</title>
 
     <link rel="stylesheet" href="css/style.css">
 
-    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap"
-        rel="stylesheet">
 </head>
 
 <body>
 
-    <!-- HEADER -->
-    <header class="page-header fade-in">
-        <h1>
-            Explore
-            <span class="highlight">
-                Indonesia Bersama Felicia
-            </span>
-        </h1>
-
-        <p>
-            Temukan destinasi wisata terbaik dengan harga terjangkau
-        </p>
-    </header>
-
     <!-- NAVBAR -->
-    <nav class="nav">
-        <a href="index.html">HOME</a>
-        <a href="package.html">PACKAGE</a>
-        <a href="booking.html">BOOKING</a>
-        <a href="login.html">LOGIN</a>
+
+    <nav class="navbar">
+
+        <div class="container nav-container">
+
+            <div class="logo">
+                Felicia Travel
+            </div>
+
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="destinasi.html" class="nav-link">Destinasi</a></li>
+                <li><a href="package.html" class="nav-link active">Paket Wisata</a></li>
+                <li><a href="promo.html" class="nav-link">Promo</a></li>
+                <li><a href="kontak.html" class="nav-link">Kontak</a></li>
+            </ul>
+
+            <a href="login.html" class="btn-login">
+                Login
+            </a>
+
+        </div>
+
     </nav>
 
-    <!-- HERO -->
-    <section class="hero fade-in">
+    <!-- HEADER -->
 
-        <h2>
-            Travel Packages
-        </h2>
+    <section class="page-header">
 
-        <p>
-            Pilih destinasi impian Anda dan nikmati pengalaman wisata terbaik.
-        </p>
+        <div class="container">
 
-        <a href="booking.html" class="hero-btn">
-            Booking Sekarang
-        </a>
+            <h1>Paket Wisata</h1>
+
+            <p>
+                Pilihan paket wisata terbaik dengan harga spesial.
+            </p>
+
+        </div>
 
     </section>
 
-    <div class="page-wrapper">
+    <!-- PACKAGE -->
 
-        <!-- PRODUCT GRID -->
-        <main class="product-grid">
+    <section class="section">
 
-            <!-- BALI -->
-            <div class="product-card reveal">
-                <div class="image-box">
-                    <img src="assets/bali.jpeg" alt="Bali Package">
-                    <span class="badge">Terlaris</span>
-                </div>
+        <div class="container">
 
-                <div class="content">
-                    <h2 class="nama-barang">BALI PACKAGE</h2>
+            <div class="package-grid">
 
-                    <p class="deskripsi-barang">
-                        Nikmati liburan 3 hari 2 malam di Bali dengan mengunjungi Pantai Kuta,
-                        Tanah Lot, dan Ubud.
-                    </p>
+                <!-- CARD 1 -->
 
-                    <div class="footer">
-                        <span class="harga-barang">
-                            Rp 3.250.000
+                <div class="package-card">
+
+                    <div class="package-image">
+
+                        <span class="badge badge-best">
+                            BEST SELLER
                         </span>
 
-                        <button class="buy-btn">
-                            Booking Now
-                        </button>
+                        <img src="https://images.unsplash.com/photo-1540959733332-eab4deabeeaf">
+
                     </div>
+
+                    <div class="package-content">
+
+                        <h3 class="package-title">
+                            Tokyo Sakura Tour
+                        </h3>
+
+                        <div class="package-meta">
+                            ✈ 6 Hari 5 Malam
+                        </div>
+
+                        <div class="package-price">
+                            Rp 16.990.000
+                        </div>
+
+                        <button
+                            class="btn-detail booking-btn"
+                            data-package="Tokyo Sakura Tour"
+                            data-price="Rp 16.990.000">
+
+                            Booking Sekarang
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 2 -->
+
+                <div class="package-card">
+
+                    <div class="package-image">
+
+                        <span class="badge badge-popular">
+                            POPULAR
+                        </span>
+
+                        <img src="https://ik.imagekit.io/tvlk/blog/2022/12/south-korea_autumn_shutterstock_1149210557-Copy.jpg?tr=q-70,c-at_max,w-500,h-250,dpr-2">
+
+                    </div>
+
+                    <div class="package-content">
+
+                        <h3 class="package-title">
+                            Seoul Autumn
+                        </h3>
+
+                        <div class="package-meta">
+                            ✈ 5 Hari 4 Malam
+                        </div>
+
+                        <div class="package-price">
+                            Rp 11.990.000
+                        </div>
+
+                        <button
+                            class="btn-detail booking-btn"
+                            data-package="Seoul Autumn"
+                            data-price="Rp 11.990.000">
+
+                            Booking Sekarang
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 3 -->
+
+                <div class="package-card">
+
+                    <div class="package-image">
+
+                        <span class="badge badge-family">
+                            FAMILY
+                        </span>
+
+                        <img src="https://images.unsplash.com/photo-1499856871958-5b9627545d1a">
+
+                    </div>
+
+                    <div class="package-content">
+
+                        <h3 class="package-title">
+                            Europe Classic
+                        </h3>
+
+                        <div class="package-meta">
+                            ✈ 9 Hari 7 Malam
+                        </div>
+
+                        <div class="package-price">
+                            Rp 27.990.000
+                        </div>
+
+                        <button
+                            class="btn-detail booking-btn"
+                            data-package="Europe Classic"
+                            data-price="Rp 27.990.000">
+
+                            Booking Sekarang
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 4 -->
+
+                <div class="package-card">
+
+                    <div class="package-image">
+
+                        <img src="https://images.unsplash.com/photo-1523482580672-f109ba8cb9be">
+
+                    </div>
+
+                    <div class="package-content">
+
+                        <h3 class="package-title">
+                            Australia Explore
+                        </h3>
+
+                        <div class="package-meta">
+                            ✈ 7 Hari 6 Malam
+                        </div>
+
+                        <div class="package-price">
+                            Rp 22.990.000
+                        </div>
+
+                        <button
+                            class="btn-detail booking-btn"
+                            data-package="Australia Explore"
+                            data-price="Rp 22.990.000">
+
+                            Booking Sekarang
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 5 -->
+
+                <div class="package-card">
+
+                    <div class="package-image">
+                        <span class="badge badge-popular">POPULAR</span>
+                        <img src="https://images.unsplash.com/photo-1537953773345-d172ccf13cf1">
+                    </div>
+
+                    <div class="package-content">
+
+                        <h3 class="package-title">
+                            Bali Paradise
+                        </h3>
+
+                        <div class="package-meta">
+                            ✈ 4 Hari 3 Malam
+                        </div>
+
+                        <div class="package-price">
+                            Rp 6.990.000
+                        </div>
+
+                        <button
+                            class="btn-detail booking-btn"
+                            data-package="Bali Paradise"
+                            data-price="Rp 6.990.000">
+
+                            Booking Sekarang
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 6-->
+
+                <div class="package-card">
+
+                    <div class="package-image">
+                        <span class="badge badge-best">BEST SELLER</span>
+                        <img src="https://images.unsplash.com/photo-1512453979798-5ea266f8880c">
+                    </div>
+
+                    <div class="package-content">
+
+                        <h3 class="package-title">
+                            Dubai Luxury
+                        </h3>
+
+                        <div class="package-meta">
+                            ✈ 5 Hari 4 Malam
+                        </div>
+
+                        <div class="package-price">
+                            Rp 18.990.000
+                        </div>
+
+                        <button
+                            class="btn-detail booking-btn"
+                            data-package="Dubai Luxury"
+                            data-price="Rp 18.990.000">
+
+                            Booking Sekarang
+
+                        </button>
+
+                    </div>
+
+                </div>
+
+                <!-- CARD 7-->
+
+                <div class="package-card">
+
+                    <div class="package-image">
+                        <span class="badge badge-family">FAMILY</span>
+                        <img src="https://images.unsplash.com/photo-1469521669194-babb45599def">
+                    </div>
+
+                    <div class="package-content">
+
+                        <h3 class="package-title">
+                            New Zealand Adventure
+                        </h3>
+
+                        <div class="package-meta">
+                            ✈ 8 Hari 7 Malam
+                        </div>
+
+                        <div class="package-price">
+                            Rp 24.990.000
+                        </div>
+
+                        <button
+                            class="btn-detail booking-btn"
+                            data-package="New Zealand Adventure"
+                            data-price="Rp 24.990.000">
+
+                            Booking Sekarang
+
+                        </button>
+
+                    </div>
+
                 </div>
             </div>
 
-            <!-- JEPANG -->
-            <div class="product-card reveal">
-                <div class="image-box">
-                    <img src="assets/jepang.jpeg" alt="Jepang Package">
-                    <span class="badge">Baru</span>
-                </div>
+        </div>
 
-                <div class="content">
-                    <h2 class="nama-barang">JEPANG PACKAGE</h2>
+    </section>
 
-                    <p class="deskripsi-barang">
-                        Nikmati liburan 4 hari 3 malam di Jepang dengan mengunjungi Tokyo,
-                        Gunung Fuji, dan Kyoto.
-                    </p>
+    <!-- BOOKING MODAL -->
 
-                    <div class="footer">
-                        <span class="harga-barang">
-                            Rp 8.900.000
-                        </span>
+    <div class="booking-modal" id="bookingModal">
 
-                        <button class="buy-btn">
-                            Booking Now
-                        </button>
-                    </div>
-                </div>
+        <div class="booking-box">
+
+            <span class="close-modal">&times;</span>
+
+            <h2>Booking Paket Wisata</h2>
+
+            <div class="booking-info">
+
+                <p>
+                    Paket :
+                    <strong id="packageName"></strong>
+                </p>
+
+                <p>
+                    Harga :
+                    <strong id="packagePrice"></strong>
+                </p>
+
             </div>
 
-            <!-- KOREA -->
-            <div class="product-card reveal">
-                <div class="image-box">
-                    <img src="assets/Korea.jpeg" alt="Korea Package">
-                    <span class="badge">Diskon</span>
-                </div>
+            <form id="bookingForm">
 
-                <div class="content">
-                    <h2 class="nama-barang">KOREA PACKAGE</h2>
+                <input
+                    type="text"
+                    placeholder="Nama Lengkap"
+                    required>
 
-                    <p class="deskripsi-barang">
-                        Nikmati liburan 4 hari 3 malam di Korea Selatan dengan mengunjungi
-                        Seoul, Nami Island, dan Gyeongbokgung Palace.
-                    </p>
+                <input
+                    type="email"
+                    placeholder="Email"
+                    required>
 
-                    <div class="footer">
-                        <span class="harga-barang">
-                            Rp 7.500.000
-                        </span>
+                <input
+                    type="tel"
+                    placeholder="Nomor Telepon"
+                    required>
 
-                        <button class="buy-btn">
-                            Booking Now
-                        </button>
-                    </div>
-                </div>
-            </div>
+                <button type="submit">
+                    Konfirmasi Booking
+                </button>
 
-            <!-- RAJA AMPAT -->
-            <div class="product-card reveal">
-                <div class="image-box">
-                    <img src="assets/rajaampat.jpeg" alt="Raja Ampat Package">
-                    <span class="badge">Terlaris</span>
-                </div>
+            </form>
 
-                <div class="content">
-                    <h2 class="nama-barang">RAJA AMPAT PACKAGE</h2>
-
-                    <p class="deskripsi-barang">
-                        Nikmati liburan 4 hari 3 malam di Raja Ampat dengan panorama laut
-                        yang menakjubkan.
-                    </p>
-
-                    <div class="footer">
-                        <span class="harga-barang">
-                            Rp 5.250.000
-                        </span>
-
-                        <button class="buy-btn">
-                            Booking Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- KAMBOJA -->
-            <div class="product-card reveal">
-                <div class="image-box">
-                    <img src="assets/KAMBOJA.jpeg" alt="Kamboja Package">
-                    <span class="badge">Baru</span>
-                </div>
-
-                <div class="content">
-                    <h2 class="nama-barang">KAMBOJA PACKAGE</h2>
-
-                    <p class="deskripsi-barang">
-                        Nikmati liburan 6 hari 5 malam ke Angkor Wat, Phnom Penh,
-                        dan Siem Reap.
-                    </p>
-
-                    <div class="footer">
-                        <span class="harga-barang">
-                            Rp 13.900.000
-                        </span>
-
-                        <button class="buy-btn">
-                            Booking Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-            <!-- VIETNAM -->
-            <div class="product-card reveal">
-                <div class="image-box">
-                    <img src="assets/VIETNAM.jpeg" alt="Vietnam Package">
-                    <span class="badge">Diskon</span>
-                </div>
-
-                <div class="content">
-                    <h2 class="nama-barang">VIETNAM PACKAGE</h2>
-
-                    <p class="deskripsi-barang">
-                        Nikmati liburan 5 hari 4 malam di Vietnam dengan mengunjungi
-                        Ha Noi, Da Lat, dan Nha Trang.
-                    </p>
-
-                    <div class="footer">
-                        <span class="harga-barang">
-                            Rp 9.500.000
-                        </span>
-
-                        <button class="buy-btn">
-                            Booking Now
-                        </button>
-                    </div>
-                </div>
-            </div>
-
-        </main>
+        </div>
 
     </div>
 
-    <!-- FOOTER -->
-    <footer class="footer-section">
+    <!-- JAVASCRIPT -->
 
-        <h3>Travel Indonesia</h3>
-
-        <p>
-            © 2025 Travel Indonesia. All Rights Reserved.
-        </p>
-
-    </footer>
-
-    <!-- FLOATING BUTTON -->
-    <div class="floating-btn">
-        ↑
-    </div>
-
-    <!-- SCROLL REVEAL -->
     <script>
 
-        const reveals = document.querySelectorAll(
-            '.product-card, .feature-box, .testimonial-box'
-        );
+        const modal =
+            document.getElementById("bookingModal");
 
-        function revealOnScroll() {
+        const packageName =
+            document.getElementById("packageName");
 
-            reveals.forEach((element) => {
+        const packagePrice =
+            document.getElementById("packagePrice");
 
-                const windowHeight = window.innerHeight;
+        const bookingButtons =
+            document.querySelectorAll(".booking-btn");
 
-                const elementTop =
-                    element.getBoundingClientRect().top;
+        bookingButtons.forEach(button => {
 
-                if (elementTop < windowHeight - 100) {
-                    element.classList.add('active');
-                }
+            button.addEventListener("click", () => {
+
+                packageName.textContent =
+                    button.dataset.package;
+
+                packagePrice.textContent =
+                    button.dataset.price;
+
+                modal.classList.add("active");
 
             });
 
-        }
+        });
 
-        window.addEventListener('scroll', revealOnScroll);
+        document
+            .querySelector(".close-modal")
+            .addEventListener("click", () => {
 
-        revealOnScroll();
+                modal.classList.remove("active");
 
+            });
+
+        window.addEventListener("click", (e) => {
+
+            if (e.target === modal) {
+
+                modal.classList.remove("active");
+
+            }
+
+        });
+        document.getElementById("bookingForm")
+.addEventListener("submit", function(e){
+
+    e.preventDefault();
+
+    const nama =
+    document.querySelector(
+        '#bookingForm input[type="text"]'
+    ).value;
+
+    const kodeBooking =
+    "FLT" +
+    Math.floor(
+        100000 + Math.random() * 900000
+    );
+
+    localStorage.setItem(
+        "bookingCode",
+        kodeBooking
+    );
+
+    localStorage.setItem(
+        "customerName",
+        nama
+    );
+
+    localStorage.setItem(
+        "packageName",
+        packageName.textContent
+    );
+
+    localStorage.setItem(
+        "packagePrice",
+        packagePrice.textContent
+    );
+
+    window.location.href =
+    "ticket.html";
+
+});
+        
     </script>
 
 </body>
